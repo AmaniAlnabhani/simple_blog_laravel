@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">All Post</a>
+          <a class="nav-link active" aria-current="page" href="/posts">All Post</a>
         </li>
         </ul>
     </div>  
@@ -44,9 +44,9 @@
         <td>{{$post['title']}}</td>
         <td>{{$post['posted_by']}}</td>
         <td>{{$post['created_at']}}</td>
-        <td>   <button type="button" class="btn btn-warning">View</button>
-        <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <td>   <a href="{{route('posts.show',$post['id'])}}"  class="btn btn-warning">View</a>
+        <a type="button" href='/post/1' class="btn btn-primary">Edit</a>
+        <a type="button" class="btn btn-danger">Delete</a>
         </td>
         </tr>
     @endforeach
