@@ -22,12 +22,11 @@
   </div>
 </nav>
 <div class="container mt-5">
-    <div class="text-center">
-    <button type="button" class="btn btn-success">Create Post</button>
+    
 
     </div>
     
-    <table class="table mt-4">
+    <table class="table mt-5">
     
         @yield('content')
     </div>

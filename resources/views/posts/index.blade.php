@@ -3,6 +3,10 @@
 @section('title') Index
 @endsection
 @section('content')
+<div>
+<div class="text-center">
+    <button type="button" class="btn btn-success">Create Post</button>
+</div>
   <thead>
     <tr>
       <th scope="col">#</th>
