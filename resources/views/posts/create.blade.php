@@ -5,18 +5,20 @@
 @section('content')
 <div class="container mt-5">
 
-   <form>
+   <form method="POST" action="{{route('posts.store')}}">
+    
+    @csrf 
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
-    <input type="text" class="form-control" id="title" >
+    <input name="title"type="text" class="form-control" id="title" >
   </div>
   <div class="mb-3">
     <label for="Description" class="form-label">Description</label>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
+    <textarea  name="description" class="form-control" aria-label="With textarea"></textarea>
   </div>
   <div class="mb-3">
       <label for="PostCreator" class="form-label">Post Creator</label>
-      <select id="PostCreator" class="form-select">
+      <select name="post_creator"  id="PostCreator" class="form-select">
         <option>Amal</option>
         <option>Ali</option>
       </select>
