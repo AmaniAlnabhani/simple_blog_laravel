@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/posts',[postController::class ,'index'])->name('posts.index');
 Route::get('/posts/create',[postController::class ,'create'])->name('posts.create');
+Route::get('/posts/{posts}/edit',[postController::class ,'edit'])->name('posts.edit');
 
 Route::post('/posts', [postController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}',[postController::class ,'show'])->name('posts.show');

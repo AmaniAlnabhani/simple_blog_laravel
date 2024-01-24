@@ -37,4 +37,7 @@ class postController extends Controller
         //redirection to posts.index
        return to_route('posts.index');
     }
+    public function edit(){
+        return view('posts.edit');
+    }
 }
