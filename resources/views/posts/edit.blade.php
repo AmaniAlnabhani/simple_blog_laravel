@@ -5,9 +5,10 @@
 @section('content')
 <div class="container mt-5">
 
-   <form >
+   <form method="POST" action="{{route('posts.update',1)}}" >
     
-    @csrf 
+    @csrf
+    @method('PUT')
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input name="title"type="text" class="form-control" id="title" >
