@@ -3,17 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
 class postController extends Controller
 {
     public function index(){
-        $allPosts=[
-            ['id'=>1,'title'=>'PHP','posted_by'=>'Amani','created_at'=>'2023-10-10 09:00:00'],
-            ['id'=>2,'title'=>'c++','posted_by'=>'Ali','created_at'=>'2023-05-07 10:00:00'],
-
-
-        ];
-        return view('posts.index',['posts'=>$allPosts]);
+        //select * posts
+        $postFromDB =Post::all(); //colliction of object
+        
+        return view('posts.index',['posts'=>$postFromDB]);
     }
     public function show($postId){
         $singlePost = ['id'=>1,'title'=>'PHP','discribtion'=>'hello everyone','posted_by'=>'Amani','email'=>'Amani@gmail','created_at'=>'2023-10-10 09:00:00'];
@@ -30,6 +27,7 @@ class postController extends Controller
         $data= request()->all();
         return  $data;
         $title = request()->title;
+        $createdBy=request()->created_By;
         $description = request()->description;
         $post_creator = request()->post_creator;
         // store the user data in database
